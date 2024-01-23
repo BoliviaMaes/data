@@ -9,7 +9,7 @@ const config = {
   githubToken: process.env.GITHUB_TOKEN,
   repo: process.env.GITHUB_REPO,
   owner: process.env.GITHUB_OWNER,
-  airtableToken: process.env.AIRTABLE_API_KEY,
+  airtableToken: process.env.AIRTABLE_PERSONAL_TOKEN,
   base: process.env.AIRTABLE_BASE_ID,
   branches: process.env.GITHUB_BRANCH ? process.env.GITHUB_BRANCH.split(',') : ['master'],
   filename: process.env.GITHUB_FILENAME || 'data.json'

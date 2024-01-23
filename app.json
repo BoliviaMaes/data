@@ -9,8 +9,8 @@
   },
   "addons": ["scheduler:standard"],
   "env": {
-    "AIRTABLE_API_KEY": {
-      "description": "Airtable API key https://airtable.com/account"
+    "AIRTABLE_PERSONAL_TOKEN": {
+      "description": "Airtable Personal Token https://airtable.com/create/tokens"
     },
     "AIRTABLE_BASE_ID": {
       "description": "Airtable base ID, from the API page for your base https://airtable.com/api"

@@ -29,7 +29,7 @@ TABLES=Table 1,Table 2
 GITHUB_TOKEN=xxxxxx
 GITHUB_REPO=github_repo_name
 GITHUB_OWNER=github_repo_owner_name
-AIRTABLE_API_KEY=xxxxxx
+AIRTABLE_PERSONAL_TOKEN=xxxxxx
 AIRTABLE_BASE_ID=airtable_base_id
 GITHUB_FILENAME=filename_for_github_export
 ```
@@ -43,7 +43,7 @@ To fill all these variables:
 
 - GitHub token: go to https://github.com/settings/tokens/new, and select the
   <code>repo</code> scope
-- Airtable API key: go to https://airtable.com/account
+- Airtable Personal Token: go to https://airtable.com/create/tokens
 - Airtable base id: go to https://airtable.com/api, click on your database, and
   search for "The ID of this base is appFyez....x9V."
 
