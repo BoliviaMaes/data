@@ -21,7 +21,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }} # see https://github.com/settings/tokens/new
       GITHUB_REPO: bolivia-maes
       GITHUB_OWNER: BoliviaMaes
-      AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }} # see https://airtable.com/account
+      AIRTABLE_PERSONAL_TOKEN: ${{ secrets.AIRTABLE_PERSONAL_TOKEN }} # see https://airtable.com/account
       AIRTABLE_BASE_ID: appmWWoGIIET5x6e4
       GITHUB_FILENAME: bolivia-maes.json   
     # Steps represent a sequence of tasks that will be executed as part of the job
