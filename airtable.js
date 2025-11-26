@@ -12,8 +12,8 @@ async function fetchTable({ base, table }) {
       // This function will get called for each page of records.
       for (const record of records) {
         data.push({
-          ...record,
-          airtableId: record._rawJson.id,
+          ...record.fields,
+          airtableId: record.id,
         });
       }
       next();
@@ -30,9 +30,7 @@ async function fetchTable({ base, table }) {
 function removeDerivedFields(records) {
   return records.map((record) => {
     return Object.fromEntries(
-      Object.entries(record._rawJson.fields).filter(
-        ([k]) => !k.includes(" (from ")
-      )
+      Object.entries(record).filter(([k]) => !k.includes(" (from "))
     );
   });
 }
