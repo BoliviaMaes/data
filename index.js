@@ -1,6 +1,7 @@
 import { fetchAirtableRecords } from "./airtable.js";
 import { synchronizeImages } from "./images.js";
 import { config as envConfig } from "dotenv";
+import fs from "fs";
 
 envConfig();
 
@@ -23,9 +24,10 @@ const buildDirectory = "./dist";
 const airtableSubDirectory = "airtable";
 const imagesSubDirectory = "images";
 
+console.log(`[init] Create local dist/ directory if it doesn't exist`);
 if (!fs.existsSync(buildDirectory)) {
   fs.mkdirSync(buildDirectory, { recursive: true });
-  log(`    -> ${buildDirectory} created`);
+  console.log(`[init]    -> ${buildDirectory} created`);
 }
 
 const airtableCacheDirectory = `${cacheDirectory}/${airtableSubDirectory}`;
