@@ -52,7 +52,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: dist
-          key: ${{ runner.os }}-dist
+          key: dist
 
       # always fetch the latest Airtable data, and then download the missing images (and delete the old ones)
       - name: Fetch the data and build

@@ -23,6 +23,11 @@ const buildDirectory = "./dist";
 const airtableSubDirectory = "airtable";
 const imagesSubDirectory = "images";
 
+if (!fs.existsSync(buildDirectory)) {
+  fs.mkdirSync(buildDirectory, { recursive: true });
+  log(`    -> ${buildDirectory} created`);
+}
+
 const airtableCacheDirectory = `${cacheDirectory}/${airtableSubDirectory}`;
 await fetchAirtableRecords({
   airtableCacheDirectory,
