@@ -4,19 +4,24 @@
   "description": "Export airtable tables to json in Github",
   "main": "airtable-export.js",
   "bin": "airtable-export.js",
+  "type": "module",
   "scripts": {
+    "clean": "npm run clean:airtable",
+    "clean:airtable": "rm -rf cache/airtable",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sylvain Lesage",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "@octokit/rest": "^16.43.1",
-    "airtable": "^0.8.1",
-    "dotenv": "^8.2.0",
+    "@octokit/rest": "^22.0.1",
+    "airtable": "^0.12.2",
+    "dotenv": "^17.2.3",
+    "hyparquet-writer": "^0.9.1",
     "json-stable-stringify": "^1.0.1"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^3.6.2"
   },
   "repository": {
     "type": "git",
