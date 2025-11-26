@@ -58,6 +58,23 @@ jobs:
       - name: Fetch the data and build
         run: npm run start
 
+      - name: Generate the index files
+        run: |
+          find dist -type d -print -exec sh -c 'tree "$0" \
+            -H "." \
+            -L 1 \
+            --noreport \
+            --houtro "" \
+            --dirsfirst \
+            --charset utf-8 \
+            -I "index.html" \
+            -T "MAEs Bolivia - Data files index" \
+            --ignore-case \
+            --timefmt "%d-%b-%Y %H:%M" \
+            -s \
+            -D \
+            -o "$0/index.html"' {} \;
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
